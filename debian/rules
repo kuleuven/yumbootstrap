@@ -4,8 +4,8 @@
 	dh $@ --with=python2
 
 override_dh_auto_build:
-	python setup.py build
+	python2 setup.py build
 
 override_dh_auto_install:
 	make install-notmodule DESTDIR=$(CURDIR)/debian/tmp BINDIR=/usr/sbin SYSCONFDIR=/etc
-	python setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb --no-compile
+	python2 setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb --no-compile

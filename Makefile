@@ -15,13 +15,13 @@ install-notmodule:
 	cp -R distros/* $(DESTDIR)$(SYSCONFDIR)/yumbootstrap/suites
 
 tarball:
-	python setup.py sdist --formats=zip
+	python2 setup.py sdist --formats=zip
 
 egg:
-	python setup.py bdist_egg
+	python2 setup.py bdist_egg
 
 clean:
-	python setup.py clean --all
+	python2 setup.py clean --all
 	rm -rf dist lib/*.egg-info
 #	rm -rf $(SPHINX_DOCTREE) $(SPHINX_OUTPUT)
 
